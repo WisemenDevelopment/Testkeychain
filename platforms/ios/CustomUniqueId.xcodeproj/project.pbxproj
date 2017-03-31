@@ -148,6 +148,7 @@
 		CE121E4D1E8E3D17005D98DE /* KeychainItemWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = KeychainItemWrapper.m; path = CustomUniqueId/Classes/KeychainItemWrapper.m; sourceTree = "<group>"; };
 		CE121E4F1E8E3D56005D98DE /* NSDataEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NSDataEncryption.h; path = CustomUniqueId/Classes/NSDataEncryption.h; sourceTree = "<group>"; };
 		CE121E501E8E3D56005D98DE /* NSDataEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSDataEncryption.m; path = CustomUniqueId/Classes/NSDataEncryption.m; sourceTree = "<group>"; };
+		CE121E531E8E5FD3005D98DE /* CustomUniqueId.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = CustomUniqueId.entitlements; path = CustomUniqueId/CustomUniqueId.entitlements; sourceTree = "<group>"; };
 		CFE8E309D7434F4E8A742158 /* CoreLocation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		D046EF0AB2C24983B437E89E /* CDVLocation.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVLocation.m; path = "cordova-plugin-geolocation/CDVLocation.m"; sourceTree = "<group>"; };
 		D10DCDFEE3B849EA93F2C404 /* CoreMotion.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -213,6 +214,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				CE121E531E8E5FD3005D98DE /* CustomUniqueId.entitlements */,
 				CE121E4F1E8E3D56005D98DE /* NSDataEncryption.h */,
 				CE121E501E8E3D56005D98DE /* NSDataEncryption.m */,
 				CE121E4C1E8E3D17005D98DE /* KeychainItemWrapper.h */,
@@ -394,6 +396,11 @@
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = 7Z8PJGM2P6;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -523,6 +530,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = CustomUniqueId/CustomUniqueId.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -551,6 +559,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_ENTITLEMENTS = CustomUniqueId/CustomUniqueId.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
